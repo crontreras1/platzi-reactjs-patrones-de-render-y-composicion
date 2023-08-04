@@ -3,11 +3,7 @@ import './TodoForm.css';
 
 function TodoForm({ addTodo, setOpenModal }) {
   const [newTodoValue, setNewTodoValue] = React.useState('');
-<<<<<<< HEAD
   
-=======
-
->>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
   };

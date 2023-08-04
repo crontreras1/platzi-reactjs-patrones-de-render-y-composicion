@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocalStorage } from './useLocalStorage';
+import { useLocalStorage } from '../TodoContext/useLocalStorage';
 
 function useTodos() {
   const {
@@ -63,10 +63,6 @@ function useTodos() {
     deleteTodo,
     openModal,
     setOpenModal,
-<<<<<<< HEAD:src/App/useTodos.js
-=======
-    sincronizeTodos,
->>>>>>> 37d48dc55010d4a1c9a2d5c83f033f0d8268415b:src/TodoContext/index.js
   };
 }
 
