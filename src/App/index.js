@@ -41,19 +41,22 @@ return (
         />
 
       <TodoList>
-        {error && <TodosError />}
-        {loading && <TodosLoading />}
-        {(!loading && !searchedTodos.length) && <EmptyTodos />}
-        
-        {searchedTodos.map(todo => (
-          <TodoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
-            onDelete={() => deleteTodo(todo.text)}
-          />
-        ))}
+        error={ error }
+        loading={ loading }
+        searchedTodos={ searchedTodos }
+        onError={ () => <TodosError /> }
+        onLoadign={ () => <TodosLoading /> }
+        onEmptyTodos={ () => <EmptyTodos /> }
+        render={ todo => (
+            <TodoItem
+              key={todo.text}
+              text={todo.text}
+              completed={todo.completed}
+              onComplete={() => completeTodo(todo.text)}
+              onDelete={() => deleteTodo(todo.text)}
+            />
+          )
+        }
       </TodoList>
 
       {!!openModal && (
