@@ -45,7 +45,7 @@ return (
         />
       </TodoHeader>
 
-      <TodoList>
+      <TodoList
         error={ error }
         loading={ loading }
         totalTodos={ totalTodos }
@@ -57,6 +57,7 @@ return (
         onEmptySearchResults={ (searchText) => {
           <p>No hay resultados para { searchText }</p>
         } }
+      >
         { todo => (
             <TodoItem
               key={todo.text}
