@@ -25,4 +25,4 @@ function ChangeAlert({ sincronize }) {
   }
 }
 
-export { ChangeAlert };
+export { ChangeAlert }; 
